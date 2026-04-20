@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Adnan VP — Python Full Stack Developer & Data Scientist</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Outfit:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- ░░ NOISE TEXTURE ░░ -->
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- ░░ SCROLL PROGRESS ░░ -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ░░ CUSTOM CURSOR ░░ -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ░░ LOADER ░░ -->
+  <div class="loader" id="loader">
+    <div class="loader-box">
+      <div class="loader-av">AV</div>
+      <div class="loader-track"><div class="loader-bar" id="loaderBar"></div></div>
+      <div class="loader-pct" id="loaderPct">0%</div>
+    </div>
+  </div>
+
+  <!-- ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+       NAVBAR
+  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <span class="nl-av">AV</span><span class="nl-slash">/</span><span class="nl-sub">Portfolio</span>
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about"      class="nav-a" data-num="01">About</a></li>
+        <li><a href="#skills"     class="nav-a" data-num="02">Skills</a></li>
+        <li><a href="#projects"   class="nav-a" data-num="03">Projects</a></li>
+        <li><a href="#experience" class="nav-a" data-num="04">Experience</a></li>
+        <li><a href="#certifications" class="nav-a" data-num="05">Certs</a></li>
+        <li><a href="#services"   class="nav-a" data-num="06">Services</a></li>
+        <li><a href="#contact"    class="nav-a" data-num="07">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="nav-hire">Hire Me</a>
+
+      <!-- Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+      </button>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about"          class="mob-a">About</a>
+      <a href="#skills"         class="mob-a">Skills</a>
+      <a href="#projects"       class="mob-a">Projects</a>
+      <a href="#experience"     class="mob-a">Experience</a>
+      <a href="#certifications" class="mob-a">Certifications</a>
+      <a href="#services"       class="mob-a">Services</a>
+      <a href="#contact"        class="mob-a">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+       SECTION 1 — HERO
+  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <section class="hero" id="home">
+    <!-- Particle canvas -->
+    <canvas id="heroCanvas"></canvas>
+
+    <!-- Gradient orbs (mouse parallax) -->
+    <div class="orb orb-1" data-speed="0.03"></div>
+    <div class="orb orb-2" data-speed="0.05"></div>
+    <div class="orb orb-3" data-speed="0.02"></div>
+
+    <div class="hero-layout container">
+      <!-- Left -->
+      <div class="hero-left">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Available for opportunities
+        </div>
+
+        <h1 class="hero-name">
+          <span class="hn-row"><span class="hn-text reveal-char" id="hn1">Adnan</span></span>
+          <span class="hn-row"><em class="hn-text reveal-char" id="hn2">VP</em></span>
+        </h1>
+
+        <div class="hero-typing">
+          <span class="typing-prefix">// </span><span id="typedText"></span><span class="typing-cursor">|</span>
+        </div>
+
+        <p class="hero-para">
+          I build modern web applications, intelligent data solutions, and scalable backend systems using Python and modern web technologies.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#" class="btn-gold">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download CV
+          </a>
+          <a href="#projects" class="btn-outline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M7 7h10v10"/></svg>
+            View Projects
+          </a>
+          <a href="#contact" class="btn-ghost">Contact Me</a>
+        </div>
+
+        <div class="hero-socials">
+          <a href="https://github.com/adnanvp"      target="_blank" class="social-pill">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.419 2.865 8.166 6.839 9.489.5.09.682-.218.682-.484 0-.236-.009-.866-.013-1.699-2.782.605-3.369-1.34-3.369-1.34-.455-1.157-1.11-1.465-1.11-1.465-.909-.621.069-.608.069-.608 1.004.07 1.532 1.03 1.532 1.03.891 1.529 2.341 1.087 2.91.831.091-.645.349-1.087.635-1.337-2.22-.251-4.555-1.111-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.252-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.026A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.295 2.747-1.026 2.747-1.026.546 1.377.202 2.395.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.934.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .269.18.579.688.481A10.019 10.019 0 0 0 22 12c0-5.523-4.477-10-10-10z"/></svg>
+            GitHub
+          </a>
+          <a href="https://linkedin.com/in/adnanvp" target="_blank" class="social-pill">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            LinkedIn
+          </a>
+          <a href="mailto:adnanvp98@gmail.com" class="social-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Email
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Profile Card -->
+      <div class="hero-right">
+        <div class="profile-card" id="profileCard">
+          <div class="pc-ring r1"></div>
+          <div class="pc-ring r2"></div>
+          <div class="pc-glass">
+            <div class="pc-avatar">
+              <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" width="70" height="70">
+                <circle cx="50" cy="37" r="22" fill="url(#ag1)"/>
+                <path d="M10 95 Q50 65 90 95" fill="url(#ag1)"/>
+                <defs>
+                  <linearGradient id="ag1" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#e8b84b"/>
+                    <stop offset="100%" stop-color="#8b6217"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div class="pc-name">Adnan VP</div>
+            <div class="pc-role">Python Full Stack Dev &amp; Data Scientist</div>
+            <div class="pc-loc">📍 Kerala, India</div>
+            <hr class="pc-divider"/>
+            <div class="pc-stats">
+              <div class="pcs-item">
+                <span class="pcs-num counter" data-target="3">0</span>
+                <span class="pcs-lbl">Yrs Exp</span>
+              </div>
+              <div class="pcs-sep"></div>
+              <div class="pcs-item">
+                <span class="pcs-num counter" data-target="10">0</span>
+                <span class="pcs-lbl">Projects</span>
+              </div>
+              <div class="pcs-sep"></div>
+              <div class="pcs-item">
+                <span class="pcs-num counter" data-target="7">0</span>
+                <span class="pcs-lbl">Certs</span>
+              </div>
+            </div>
+            <div class="pc-links">
+              <a href="https://github.com/adnanvp" target="_blank" class="pcl">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.419 2.865 8.166 6.839 9.489.5.09.682-.218.682-.484 0-.236-.009-.866-.013-1.699-2.782.605-3.369-1.34-3.369-1.34-.455-1.157-1.11-1.465-1.11-1.465-.909-.621.069-.608.069-.608 1.004.07 1.532 1.03 1.532 1.03.891 1.529 2.341 1.087 2.91.831.091-.645.349-1.087.635-1.337-2.22-.251-4.555-1.111-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.252-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.026A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.295 2.747-1.026 2.747-1.026.546 1.377.202 2.395.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.934.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .269.18.579.688.481A10.019 10.019 0 0 0 22 12c0-5.523-4.477-10-10-10z"/></svg>
+              </a>
+              <a href="https://linkedin.com/in/adnanvp" target="_blank" class="pcl">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+              </a>
+              <a href="mailto:adnanvp98@gmail.com" class="pcl">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </a>
+              <a href="https://www.bytekicks.shop" target="_blank" class="pcl">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="hero-scroll">
+      <div class="hs-line"><div class="hs-dot"></div></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- Marquee -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>Python</span><b>✦</b><span>Django</span>
+      <span>Machine Learning</span><b>✦</b><span>Data Science</span><b>✦</b><span>REST API</span><b>✦</b>
+      <span>SQL</span><b>✦</b><span>JavaScript</span><b>✦</b><span>Power BI</span><b>✦</b><span>Scikit-learn</span><b>✦</b>
+      <span>Python</span><b>✦</b><span>Django</span>
+      <span>Machine Learning</span><b>✦</b><span>Data Science</span><b>✦</b><span>REST API</span><b>✦</b>
+      <span>SQL</span><b>✦</b><span>JavaScript</span><b>✦</b><span>Power BI</span><b>✦</b><span>Scikit-learn</span><b>✦</b>
+    </div>
+  </div>
+
+  <!-- ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+       SECTION 2 — ABOUT
+  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <section class="section about-sec" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-left reveal-left">
+          <div class="eyebrow">About Me</div>
+          <h2 class="sec-heading">Crafting code<br/>that <em>thinks</em> &amp; scales.</h2>
+          <p>Adnan VP is a BCA graduate from the University of Calicut — a Python Full Stack Developer with strong experience in web application development, data science, and machine learning. Skilled in building scalable backend systems using <strong>Django</strong>, and creating responsive frontend applications using HTML, CSS, and JavaScript.</p>
+          <p>He also has hands-on experience in data analysis, machine learning models, and data visualization using Python libraries — turning raw data into intelligent, actionable insights.</p>
+          <div class="tag-row">
+            <span class="tag">BCA Graduate</span>
+            <span class="tag">Calicut University</span>
+            <span class="tag">Full Stack</span>
+            <span class="tag">Data Science</span>
+            <span class="tag">ML Engineer</span>
+          </div>
+        </div>
+        <div class="about-right reveal-right">
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <span class="m-num counter" data-target="3">0</span>
+              <span class="m-label">Years<br/>Experience</span>
+              <div class="m-accent"></div>
+            </div>
+            <div class="metric-card">
+              <span class="m-num counter" data-target="10">0</span>
+              <span class="m-label">Projects<br/>Completed</span>
+              <div class="m-accent"></div>
+            </div>
+            <div class="metric-card">
+              <span class="m-num counter" data-target="7">0</span>
+              <span class="m-label">Certifications<br/>Earned</span>
+              <div class="m-accent"></div>
+            </div>
+            <div class="quote-card">
+              <div class="qc-mark">"</div>
+              <p>Clean code, smart data,<br/>meaningful impact.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+       SECTION 3 — SKILLS
+  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <section class="section skills-sec" id="skills">
+    <div class="container">
+      <div class="sec-header reveal-up">
+        <div class="eyebrow">Expertise</div>
+        <h2 class="sec-heading">Skills &amp; <em>Technologies</em></h2>
+      </div>
+
+      <div class="skills-layout">
+        <!-- Bar skills -->
+        <div class="skills-bars-col">
+          <div class="skill-group reveal-up">
+            <div class="sg-title"><span class="sg-icon">{ }</span> Programming</div>
+            <div class="skill-bar-list">
+              <div class="skill-bar-item">
+                <div class="sb-label"><span>Python</span><span class="sb-pct">95%</span></div>
+                <div class="sb-track"><div class="sb-fill" data-width="95"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="sb-label"><span>JavaScript</span><span class="sb-pct">80%</span></div>
+                <div class="sb-track"><div class="sb-fill" data-width="80"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="sb-label"><span>SQL</span><span class="sb-pct">82%</span></div>
+                <div class="sb-track"><div class="sb-fill" data-width="82"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-group reveal-up">
+            <div class="sg-title"><span class="sg-icon">◈</span> Frontend</div>
+            <div class="skill-bar-list">
+              <div class="skill-bar-item">
+                <div class="sb-label"><span>HTML5 &amp; CSS3</span><span class="sb-pct">92%</span></div>
+                <div class="sb-track"><div class="sb-fill" data-width="92"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="sb-label"><span>JavaScript</span><span class="sb-pct">80%</span></div>
+                <div class="sb-track"><div class="sb-fill" data-width="80"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="sb-label"><span>Bootstrap</span><span class="sb-pct">85%</span></div>
+                <div class="sb-track"><div class="sb-fill" data-width="85"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-group reveal-up">
+            <div class="sg-title"><span class="sg-icon">⬡</span> Backend</div>
+            <div class="skill-bar-list">
+              <div class="skill-bar-item">
+                <div class="sb-label"><span>Django</span><span class="sb-pct">90%</span></div>
+                <div class="sb-track"><div class="sb-fill" data-width="90"></div></div>
+              </div>
+              <!-- <div class="skill-bar-item">
+                <div class="sb-label"><span>Flask</span><span class="sb-pct">25%</span></div>
+                <div class="sb-track"><div class="sb-fill" data-width="25"></div></div>
+              </div>
+              <div class="skill-bar-item">
+                <div class="sb-label"><span>REST API</span><span class="sb-pct">28%</span></div>
+                <div class="sb-track"><div class="sb-fill" data-width="28"></div></div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Chip skills -->
+        <div class="skills-chips-col">
+          <div class="skill-group reveal-up">
+            <div class="sg-title"><span class="sg-icon">⚡</span> Data Science</div>
+            <div class="chip-grid">
+              <span class="chip">Pandas</span><span class="chip">NumPy</span>
+              <span class="chip">Scikit-learn</span><span class="chip">Machine Learning</span>
+              <span class="chip">Data Analysis</span><span class="chip">EDA</span>
+            </div>
+          </div>
+          <div class="skill-group reveal-up">
+            <div class="sg-title"><span class="sg-icon">⚙</span> Tools</div>
+            <div class="chip-grid">
+              <span class="chip">Git / GitHub</span><span class="chip">Postman</span>
+              <span class="chip">VS Code</span><span class="chip">Power BI</span>
+              <span class="chip">Tableau</span><span class="chip">MySQL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+       SECTION 4 — PROJECTS
+  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <section class="section projects-sec" id="projects">
+    <div class="container">
+      <div class="sec-header reveal-up">
+        <div class="eyebrow">Portfolio</div>
+        <h2 class="sec-heading">Featured <em>Projects</em></h2>
+      </div>
+
+      <!-- Featured large -->
+      <div class="project-featured reveal-up">
+        <div class="pf-content">
+          <div class="pf-meta">
+            <span class="pf-num">01</span>
+            <span class="pf-cat">Full Stack</span>
+          </div>
+          <h3>Jurist — Lawyer Booking System</h3>
+          <p>Full-featured Django + MySQL platform for searching and booking lawyers in real time. Includes user authentication, role-based access control, appointment scheduling, and admin dashboard.</p>
+          <div class="pf-tags">
+            <span>Python</span><span>Django</span><span>REST API</span><span>MySQL</span><span>HTML</span><span>CSS</span>
+          </div>
+          <div class="pf-actions">
+            <a href="#" class="btn-gold sm">Live Demo ↗</a>
+            <a href="https://github.com/adnanvp" target="_blank" class="btn-outline sm">GitHub</a>
+          </div>
+        </div>
+        <div class="pf-mock">
+          <div class="mock-browser">
+            <div class="mb-bar">
+              <span class="mb-dot red"></span>
+              <span class="mb-dot yellow"></span>
+              <span class="mb-dot green"></span>
+              <span class="mb-url">jurist.app / book-lawyer</span>
+            </div>
+            <div class="mb-body">
+              <div class="mb-sidebar">
+                <div class="mbs-item active"></div>
+                <div class="mbs-item"></div>
+                <div class="mbs-item"></div>
+                <div class="mbs-item"></div>
+              </div>
+              <div class="mb-main">
+                <div class="mbm-hero"></div>
+                <div class="mbm-cards">
+                  <div class="mbm-card"></div>
+                  <div class="mbm-card"></div>
+                  <div class="mbm-card"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 card grid -->
+      <div class="projects-grid">
+        <!-- P2 -->
+        <div class="proj-card tilt-card reveal-up">
+          <div class="pc-head pc-h2">
+            <span class="pc-idx">02</span>
+            <span class="pc-cat-badge">E-Commerce</span>
+          </div>
+          <div class="pc-body">
+            <h3>ByteKicks — Footwear Store</h3>
+            <p>Shopify store with custom theme, SEO optimization, and social media integration for customer engagement.</p>
+            <div class="pc-tags"><span>Shopify</span><span>Liquid</span><span>CSS</span></div>
+            <div class="pc-actions">
+              <a href="https://www.bytekicks.shop" target="_blank">Visit Store ↗</a>
+              <a href="https://github.com/adnanvp" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- P3 -->
+        <div class="proj-card tilt-card reveal-up">
+          <div class="pc-head pc-h3">
+            <span class="pc-idx">03</span>
+            <span class="pc-cat-badge">Web</span>
+          </div>
+          <div class="pc-body">
+            <h3>Personal Portfolio</h3>
+            <p>Responsive developer portfolio with modern animations, clean architecture, and full mobile support.</p>
+            <div class="pc-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            <div class="pc-actions">
+              <a href="https://adnanportfolio.com" target="_blank">Live Demo ↗</a>
+              <a href="https://github.com/adnanvp" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- P4 -->
+        <div class="proj-card tilt-card reveal-up">
+          <div class="pc-head pc-h4">
+            <span class="pc-idx">04</span>
+            <span class="pc-cat-badge">ML</span>
+          </div>
+          <div class="pc-body">
+            <h3>Heart Disease Prediction</h3>
+            <p>Boosted model accuracy from <strong>85% → 92%</strong> using feature engineering and hyperparameter tuning.</p>
+            <div class="pc-tags"><span>Python</span><span>Scikit-learn</span><span>Pandas</span></div>
+            <div class="pc-actions">
+              <a href="https://github.com/adnanvp" target="_blank">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+       SECTION 5 — EXPERIENCE
+  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <section class="section experience-sec" id="experience">
+    <div class="container">
+      <div class="exp-layout">
+        <div class="exp-left reveal-left">
+          <div class="eyebrow">Journey</div>
+          <h2 class="sec-heading">Experience<br/>&amp; <em>Education</em></h2>
+          <p>Building real-world expertise through hands-on industry exposure and academic excellence in computer science.</p>
+        </div>
+
+        <div class="exp-right">
+          <div class="timeline">
+            <!-- Work -->
+            <div class="tl-item reveal-right">
+              <div class="tl-connector">
+                <div class="tl-dot"></div>
+                <div class="tl-line"></div>
+              </div>
+              <div class="tl-glass">
+                <div class="tlg-top">
+                  <span class="tl-badge work-badge">Work</span>
+                  <span class="tl-date">Mar 2025 — May 2025</span>
+                </div>
+                <h3>Data Science Intern</h3>
+                <h4>SMEC Automation Pvt Ltd</h4>
+                <ul class="tl-list">
+                  <li>Boosted heart disease prediction accuracy from 85% to <strong>92%</strong></li>
+                  <li>Performed data cleaning, feature engineering &amp; model tuning</li>
+                  <li>Built automated Power BI dashboards connected to SQL databases</li>
+                  <li>Reduced monthly reporting workload by <strong>5+ hours</strong></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Education -->
+            <div class="tl-item reveal-right">
+              <div class="tl-connector">
+                <div class="tl-dot"></div>
+              </div>
+              <div class="tl-glass">
+                <div class="tlg-top">
+                  <span class="tl-badge edu-badge">Education</span>
+                  <span class="tl-date">2021 — 2024</span>
+                </div>
+                <h3>Bachelor of Computer Applications</h3>
+                <h4>University of Calicut</h4>
+                <p>Graduated with deep expertise in software development, data structures, algorithms, and modern programming paradigms.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+       SECTION 6 — CERTIFICATIONS
+  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <section class="section certs-sec" id="certifications">
+    <div class="container">
+      <div class="sec-header reveal-up">
+        <div class="eyebrow">Credentials</div>
+        <h2 class="sec-heading">Certifications</h2>
+      </div>
+      <div class="certs-grid">
+        <div class="cert-card tilt-card reveal-up"><span class="cert-emoji">🎓</span><div><strong>Master in Data Science</strong><span>SMEC Labs · 2024–2025</span></div></div>
+        <div class="cert-card tilt-card reveal-up"><span class="cert-emoji">⚡</span><div><strong>Python Full Stack Developer</strong><span>Steyp / Talrop</span></div></div>
+        <div class="cert-card tilt-card reveal-up"><span class="cert-emoji">🛡️</span><div><strong>Career Essentials in Cybersecurity</strong><span>Microsoft</span></div></div>
+        <div class="cert-card tilt-card reveal-up"><span class="cert-emoji">🤖</span><div><strong>Career Essentials in Generative AI</strong><span>Microsoft</span></div></div>
+        <div class="cert-card tilt-card reveal-up"><span class="cert-emoji">🎨</span><div><strong>UI/UX Design</strong><span>Great Learning</span></div></div>
+        <div class="cert-card tilt-card reveal-up"><span class="cert-emoji">💻</span><div><strong>Frontend Development</strong><span>Great Learning</span></div></div>
+        <div class="cert-card tilt-card reveal-up"><span class="cert-emoji">📊</span><div><strong>GenAI Powered Data Analytics</strong><span>Tata Simulation</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+       SECTION 7 — SERVICES
+  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <section class="section services-sec" id="services">
+    <div class="container">
+      <div class="sec-header reveal-up">
+        <div class="eyebrow">What I Do</div>
+        <h2 class="sec-heading">Services</h2>
+      </div>
+      <div class="services-grid">
+        <div class="srv-card tilt-card reveal-up">
+          <div class="srv-num">01</div>
+          <div class="srv-icon-wrap">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><rect x="4" y="10" width="40" height="28" rx="3"/><path d="M12 22l5 5-5 5M20 32h10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Web Application Development</h3>
+          <p>Building responsive and scalable web applications with clean architecture, exceptional UX, and modern best practices.</p>
+          <div class="srv-arrow">→</div>
+        </div>
+        <div class="srv-card tilt-card reveal-up">
+          <div class="srv-num">02</div>
+          <div class="srv-icon-wrap">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><rect x="8" y="8" width="32" height="32" rx="4"/><path d="M16 20h6M16 24h12M16 28h9" stroke-linecap="round"/><circle cx="34" cy="18" r="4"/></svg>
+          </div>
+          <h3>Backend Development</h3>
+          <p>Designing secure, high-performance APIs and backend systems using Django and Flask, optimized for reliability and scale.</p>
+          <div class="srv-arrow">→</div>
+        </div>
+        <div class="srv-card tilt-card reveal-up">
+          <div class="srv-num">03</div>
+          <div class="srv-icon-wrap">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" width="28" height="28"><path d="M8 38L16 24l8 6 8-16 8 12" stroke-linecap="round" stroke-linejoin="round"/><circle cx="32" cy="14" r="3" fill="currentColor" stroke="none" opacity=".7"/></svg>
+          </div>
+          <h3>Data Analysis &amp; ML</h3>
+          <p>Developing predictive models and data-driven insights from raw data — EDA, feature engineering, and visualization.</p>
+          <div class="srv-arrow">→</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+       SECTION 8 — CONTACT
+  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <section class="section contact-sec" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Info -->
+        <div class="contact-info reveal-left">
+          <div class="eyebrow">Get In Touch</div>
+          <h2 class="sec-heading">Let's build<br/>something<br/><em>remarkable.</em></h2>
+          <p>Open for full-time roles, freelance projects, and interesting collaborations. Let's connect.</p>
+          <div class="contact-items">
+            <a href="tel:+916238686146" class="contact-item">
+              <div class="ci-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 17.18v-.26z"/></svg>
+              </div>
+              <div><span class="ci-label">Phone</span><span class="ci-value">+91 6238686146</span></div>
+            </a>
+            <a href="mailto:adnanvp98@gmail.com" class="contact-item">
+              <div class="ci-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div><span class="ci-label">Email</span><span class="ci-value">adnanvp98@gmail.com</span></div>
+            </a>
+            <a href="https://linkedin.com/in/adnanvp" target="_blank" class="contact-item">
+              <div class="ci-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+              </div>
+              <div><span class="ci-label">LinkedIn</span><span class="ci-value">linkedin.com/in/adnanvp</span></div>
+            </a>
+            <a href="https://github.com/adnanvp" target="_blank" class="contact-item">
+              <div class="ci-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.419 2.865 8.166 6.839 9.489.5.09.682-.218.682-.484 0-.236-.009-.866-.013-1.699-2.782.605-3.369-1.34-3.369-1.34-.455-1.157-1.11-1.465-1.11-1.465-.909-.621.069-.608.069-.608 1.004.07 1.532 1.03 1.532 1.03.891 1.529 2.341 1.087 2.91.831.091-.645.349-1.087.635-1.337-2.22-.251-4.555-1.111-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.252-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.026A9.578 9.578 0 0 1 12 6.836a9.59 9.59 0 0 1 2.504.337c1.909-1.295 2.747-1.026 2.747-1.026.546 1.377.202 2.395.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.934.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .269.18.579.688.481A10.019 10.019 0 0 0 22 12c0-5.523-4.477-10-10-10z"/></svg>
+              </div>
+              <div><span class="ci-label">GitHub</span><span class="ci-value">github.com/adnanvp</span></div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="contact-form-wrap reveal-right">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="cf-row">
+              <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" name="name" placeholder="John Doe" required/>
+              </div>
+              <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" name="email" placeholder="john@example.com" required/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea name="message" rows="6" placeholder="Tell me about your project or opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="btn-gold submit-btn" id="submitBtn">
+              <span class="btn-label">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                Send Message
+              </span>
+              <span class="btn-loading" hidden>
+                <svg class="spin" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                Sending...
+              </span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+       FOOTER
+  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="ft-top">
+        <div class="ft-brand">
+          <div class="ft-logo">AV<span>/</span></div>
+          <p>Python Full Stack Developer &amp; Data Scientist<br/>based in Kerala, India.</p>
+        </div>
+        <nav class="ft-nav">
+          <a href="#about">About</a><a href="#skills">Skills</a>
+          <a href="#projects">Projects</a><a href="#experience">Experience</a>
+          <a href="#certifications">Certifications</a><a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="ft-social">
+          <a href="https://github.com/adnanvp" target="_blank">GitHub</a>
+          <a href="https://linkedin.com/in/adnanvp" target="_blank">LinkedIn</a>
+          <a href="https://www.bytekicks.shop" target="_blank">ByteKicks</a>
+          <a href="mailto:adnanvp98@gmail.com">Email</a>
+        </div>
+      </div>
+      <div class="ft-divider"></div>
+      <div class="ft-bottom">
+        <span>© 2026 Adnan VP. All Rights Reserved.</span>
+        <span>Crafted with precision &amp; Python passion ✦</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ░░ TOAST ░░ -->
+  <div class="toast" id="toast" role="alert">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+    Message sent successfully!
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
